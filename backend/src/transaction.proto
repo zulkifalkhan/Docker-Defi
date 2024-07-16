@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package transaction;
+
+service TransactionService {
+  rpc VerifyTransaction (VerifyRequest) returns (VerifyResponse) {}
+}
+
+
+
+message VerifyRequest {
+  string to = 1;
+  string from = 2;
+  double amount = 3;
+  string publicKey = 4;
+  string signature = 5;
+}
+
+message VerifyResponse {
+  bool verified = 1;
+}

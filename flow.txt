@@ -1,0 +1,24 @@
+
+-create an api for getting transaction and verfiying it
+-so create a node server
+-create an endpoint for transaction creation and then for verfiying as well
+-use gRPC for all the communications and see how all of it will work
+-also add a filehandling function which adds a tx to the end of a file as a blockchain ledger
+-so basically the flow is like this:
+
+1- frontend uses react to have a good UI so then i can add on upwork as well (this might be done in v2)
+2-it will uses gRPC for communcation between endpoints
+3-so suppose 3-4 nodes are running all of them will be runinng using a dockerfile which will turn it to an image 
+which will then be running in their containers. All of these will be achieved using docker-compose which ultimatelty
+is a container orchestration on a beginner level amaybe. This will also use docker networking concepts which will help
+to run all the conatiners by using docker bridge network which will help each of the image running (node server) to discover
+the other images running. Then we will use gRPC to communicate in between them.
+4- Then we will need to know how they will work together and i think each of them will kind of work like p2p so basically as
+a server and a client.
+5- so for verficaiton the algo might be like each of the server will get a request of a tx and then user will look into the 
+file and see if the from the right source and for that we will need to use cryptography and pub/private key concept
+6-once verifed then store the tx and send the response back to the user frontend an
+
+
+ 
+* tx  = transaction
